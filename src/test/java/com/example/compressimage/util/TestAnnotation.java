@@ -26,7 +26,7 @@ public class TestAnnotation {
     @Test
     public void test() throws IOException {
 // 模拟上传的图片文件
-        File imageFile = new File("src/main/resources/static/微信图片_20230726102901.jpg"); // 替换成实际的图片路径
+        File imageFile = new File("src/main/resources/static/AE1.jpg"); // 替换成实际的图片路径
 
         // 创建一个MultipartFile对象
         MultipartFile multipartFile = new MockMultipartFile(
