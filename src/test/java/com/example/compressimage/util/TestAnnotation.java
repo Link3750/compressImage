@@ -14,7 +14,7 @@ import java.io.IOException;
 
 /**
  * @author: 雪竹
- * @description: TODO
+ * @description: 测试类
  * @dateTime: 2023/9/5 16:40
  **/
 @SpringBootTest(classes = CompressImageApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
