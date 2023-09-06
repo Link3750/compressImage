@@ -1,8 +1,9 @@
-package com.util;
+package com.example.compressimage.util;
 
 
-import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.compressimage.CompressImageApplication;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -16,6 +17,7 @@ import java.io.IOException;
  * @description: TODO
  * @dateTime: 2023/9/5 16:40
  **/
+@SpringBootTest(classes = CompressImageApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TestAnnotation {
 
     @Resource
@@ -24,7 +26,7 @@ public class TestAnnotation {
     @Test
     public void test() throws IOException {
 // 模拟上传的图片文件
-        File imageFile = new File("src/main/resources/static/1440X400.jpg"); // 替换成实际的图片路径
+        File imageFile = new File("src/main/resources/static/微信图片_20230726102901.jpg"); // 替换成实际的图片路径
 
         // 创建一个MultipartFile对象
         MultipartFile multipartFile = new MockMultipartFile(
@@ -33,7 +35,6 @@ public class TestAnnotation {
                 "image/jpeg", // 图片的Content-Type
                 new FileInputStream(imageFile)
         );
-        uploadImage.test(multipartFile);
-        System.out.println(multipartFile);
+        uploadImage.uploadImage(multipartFile);
     }
 }

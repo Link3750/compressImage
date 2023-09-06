@@ -1,9 +1,6 @@
-package com.util.ano;
+package com.example.compressimage.util.ano;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * @author: 雪竹
@@ -12,11 +9,13 @@ import java.lang.annotation.Target;
  **/
 @Target(value = ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
+@Documented
 public @interface CompressAnnotation {
-
-    String finalLong() default "";
-
-    String finalWidth() default "";
-
     String finalSize() default "200";
+
+    String scale() default "0.9";
+
+    String defaultQuantity() default  "0.9";
+
+    String quantityGap() default  "0.05";
 }

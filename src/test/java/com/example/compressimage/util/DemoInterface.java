@@ -1,4 +1,4 @@
-package com.util;
+package com.example.compressimage.util;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -9,5 +9,5 @@ import org.springframework.web.multipart.MultipartFile;
  **/
 public interface DemoInterface {
 
-    void test(MultipartFile multipartFile);
+    void uploadImage(MultipartFile multipartFile);
 }
